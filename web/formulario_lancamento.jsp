@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+
   <title>formulario lancamento</title>
 </head>
 
@@ -16,47 +18,56 @@
         <jsp:include page = "./header.jsp" />
     </header>
 
-    <fieldset>
-      <legend>Cadastro de LanÃ§amentos na Conta-Corrente</legend>
-      <form>
+    <div class="conteudo">
+        <div class="titulodapagina"> Cadastro de Lançamentos na Conta-Corrente</div>
+        <form>
+            <div class="form-content">
+                <label for="?contacorrente">Conta</label>
+                <select placeholder="contacorrente" name="contacorrente">
+                    <option value="contafaculdade">Conta Faculdade</option>
+                    <option value="contacasal">Conta Casal</option>
+                    <option value="contasalário">Conta Salário</option>
+                </select>
+            </div>
 
-        <p><label for="contacorrente">Conta</label><br>
-          <select placeholder="contacorrente" name="contacorrente">
-            <option value="contafaculdade">Conta Faculdade</option>
-            <option value="contacasal">Conta Casal</option>
-            <option value="contasalario">Conta Salário</option>
-          </select><br>
-        </p>
-        <p><label for="categoria">Categoria</label><br>
-          <select name="categoria">
-            <option value="planodesaude">Plano de Saúde</option>
-            <option value="luz">Luz</option>
-            <option value="salario">Salário</option>
-          </select><br>
-        </p>
-        <p><label for="valor">Valor</label><br>
-          <input type="text" placeholder="R$250,00" size="38" id="valor" name="valor"><br>
-        </p>
-        <p><label for="operacao">Operação</label><br>
-          <input type="radio" name="operacao" value="debito"> Débito
-          <input type="radio" name="operacao" value="credito"> Crédito<br>
-        </p>
+            <div class="form-content">
+                <label for="categoria">Categoria</label>
+                <select name="categoria">
+                    <option value="planodesaude">Plano de Saúde</option>
+                    <option value="luz">Luz</option>
+                    <option value="salario">Salário</option>
+                </select>
+            </div>
 
-        <p><label for="data">Data</label><br>
-          <input type="date" size="38" id="data" name="data"><br>
-        </p>
+            <div class="form-content">
+                <label for="?valor">Valor</label>
+                <input type="text" placeholder="ex: R$250,00" size="14" id="valor" name="valor">
+            </div>
 
-        <p><label for="descricao;">Descrição</label><br>
-          <textarea name="descricao" form="usrform"></textarea>
-        </p>
+            <div class="form-content">
+                <label for="operacao">Operação</label>
+                <div class="form-pagamento">
+                    <input type="radio" class="opcao" name="opcao" value="debito"> Débito
+                    <input type="radio" class="opcao" name="opcao" value="credito"> Crédito
+                </div>
+            </div>
 
-        <p><input type="reset">
-          <input type="submit" value="Enviar">
-        </p>
+            <div class="form-content">
+                <label for="data">Data</label>
+                <input type="date" size="38" id="?data?" name="?data?">
+            </div>
 
-      </form>
-    </fieldset>
+            <div class="form-content">
+                <label for="descricao">Descrição</label>
+                <textarea rows="5" cols="30" style="resize: none" name="descricao" form="usrform"></textarea>
+            </div>
 
+
+            <input type="reset">
+            <input type="submit" value="Enviar">
+
+        </form>
+    </div>
   </body>
 
 </html>
