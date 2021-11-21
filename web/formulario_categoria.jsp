@@ -7,24 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <title>formulario categoria</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Cadastrar Categoria</title>
+    <div>
 </head>
 
 <body>
     <header>
-        <jsp:include page = "./header.jsp" />
+        <jsp:include page="./header.jsp"/>
     </header>
 
-    <fieldset>
-        <legend>Criar Categoria</legend>
+    <div class="conteudo">
+        <div class="titulodapagina"> Cadastro de Categoria</div>
         <form>
-
-            <label for=“categoria"></label><br>
-            <input type="text" size="38" id=“categoria” name=“valor”>
+            <label for="categoria"></label><br>
+            <input type="text" size="38" id=“categoria” name=“valor” required>
             <input type="submit" value="Enviar"></p>
 
         </form>
-    </fieldset>
+        </fieldset>
 </body>
 
 </html>

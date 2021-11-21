@@ -7,30 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <title>formulario login</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Login</title>
 </head>
 
 <body>
-    
+
     <header>
-        <jsp:include page = "./header.jsp" />
+        <jsp:include page="./header.jsp" />
     </header>
 
-    <fieldset>
-        <legend>Login</legend>
+    <div class="conteudo">
+        <div class="titulodapagina"> Login </div>
         <form>
 
-            <p><label for=cpf">CPF</label><br>
-                <input type="text" placeholder="ex:12345678910" size="12" maxlength="11" id="cpf" name="cpf" required><br>
-            </p>
-            <p><label for="senha">Senha</label><br>
-                <input type="password" size="12" maxlength="10" name="password" required /><br>
-            </p>
-
-            <p><input type="submit" value="Entrar"></p>
+            <label for="cpf">CPF</label>
+                <input type="text" placeholder="ex:12345678910" size="12" maxlength="11" id=“cpf”
+                    name=“cpf”required>
+            
+            <label for="senha">Senha</label>
+                <input type="password" size="12" maxlength="10" name="password" required />
+            
+            <input type="reset">
+            <input type="submit" value="Entrar">
 
         </form>
-    </fieldset>
+    </div>    
 </body>
 
 </html>

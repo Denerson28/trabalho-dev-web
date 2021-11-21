@@ -7,41 +7,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <title>formulario usuario</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <title>Cadastrar Usuário</title>
 </head>
 
 <body>
+  <header>
+    <jsp:include page="./header.jsp" />
+  </header>
 
-    <header>
-        <jsp:include page = "./header.jsp" />
-    </header>
-  <fieldset>
-    <legend>Cadastro de Usuario</legend>
+  <div class="conteudo">
+    <div class="titulodapagina"> Cadastro de Usuário</div>
     <form>
+        <label for="nome">Nome Completo</label>
+        <input type="text" placeholder="ex: Lucas Silva Ferreira" size="38" id=“nome” name=“nome” required>
+        <label for="cpf">CPF</label>
+        <input type="text" placeholder="ex:12345678910" size="12" maxlength="11" id=“cpf” name=“cpf” required>
+        <label for="senha">Senha</label>
+        <input type="password" size="12" maxlength="10" name="password" required/>
+        <label for="statusdousuario">Status do Usuário</label>
+        <select placeholder="Status do Usuário" name="statusdousuario">
+        <p><option value="Disponível">Disponível</option>
+        <option value="Suspenso">Suspenso</option></select></p>
 
-      <p><label for="nome">Nome Completo</label><br>
-        <input type="text" placeholder="ex: Lucas Silva Ferreira" size="38" id="nome" name="nome"><br>
-      </p>
-      <p><label for="cpf">CPF</label><br>
-        <input type="text" placeholder="ex:12345678910" size="12" maxlength="11" id="cpf" name="cpf"><br>
-      </p>
-      <p><label for="senha">Senha</label><br>
-        <input type="password" size="12" maxlength="10" name="password" /><br>
-      </p>
-      <p><label for="statusdousuario">Status do Usuario</label><br>
-        <select placeholder="Status do Usu�rio" name="statusdousuario">
-      </p>
 
-      <option value="Dispon�vel">Dispon�vel</option>
-      <option value="Suspenso">Suspenso</option>
-      </select>
+      <input type="reset">
+      <input type="submit" value="Enviar">
 
-      <p><input type="reset">
-        <input type="submit" value="Enviar">
-      </p>
 
     </form>
-  </fieldset>
 </body>
 
 </html>

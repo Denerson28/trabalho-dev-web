@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./style.css" />
 
-  <title>formulario lancamento</title>
+  <title>Lan√ßamentos</title>
 </head>
 
 <body>
@@ -19,23 +19,23 @@
     </header>
 
     <div class="conteudo">
-        <div class="titulodapagina"> Cadastro de LanÁamentos na Conta-Corrente</div>
+        <div class="titulodapagina"> Cadastro de Lan√ßamentos na Conta-Corrente</div>
         <form>
             <div class="form-content">
                 <label for="?contacorrente">Conta</label>
                 <select placeholder="contacorrente" name="contacorrente">
                     <option value="contafaculdade">Conta Faculdade</option>
                     <option value="contacasal">Conta Casal</option>
-                    <option value="contasal·rio">Conta Sal·rio</option>
+                    <option value="contasal√°rio">Conta Sal√°rio</option>
                 </select>
             </div>
 
             <div class="form-content">
                 <label for="categoria">Categoria</label>
                 <select name="categoria">
-                    <option value="planodesaude">Plano de Sa˙de</option>
+                    <option value="planodesaude">Plano de Sa√∫de</option>
                     <option value="luz">Luz</option>
-                    <option value="salario">Sal·rio</option>
+                    <option value="salario">Sal√°rio</option>
                 </select>
             </div>
 
@@ -45,10 +45,10 @@
             </div>
 
             <div class="form-content">
-                <label for="operacao">OperaÁ„o</label>
+                <label for="operacao">Opera√ß√£o</label>
                 <div class="form-pagamento">
-                    <input type="radio" class="opcao" name="opcao" value="debito"> DÈbito
-                    <input type="radio" class="opcao" name="opcao" value="credito"> CrÈdito
+                    <input type="radio" class="opcao" name="opcao" value="debito"> D√©bito
+                    <input type="radio" class="opcao" name="opcao" value="credito"> Cr√©dito
                 </div>
             </div>
 
@@ -58,7 +58,7 @@
             </div>
 
             <div class="form-content">
-                <label for="descricao">DescriÁ„o</label>
+                <label for="descricao">Descri√ß√£o</label>
                 <textarea rows="5" cols="30" style="resize: none" name="descricao" form="usrform"></textarea>
             </div>
 
