@@ -7,30 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <title>formulario login</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    
+
+    <title>Login</title>
 </head>
 
 <body>
-    
+
     <header>
-        <jsp:include page = "./header.jsp" />
+        <jsp:include page="./header.jsp" />
     </header>
 
-    <fieldset>
-        <legend>Login</legend>
-        <form>
+    <div class="content">
+        
+        <form class="card">
+            <h3>Login</h3>
+            <div class="login">
+                <label for="cpf">CPF</label>
+                    <input type="text" class="cpf" placeholder="Digite seu CPF" size="12" maxlength="11" id="cpf" name="cpf" required>
+            </div>
+            
+            <div class="login">
+                <label for="senha">Senha</label>
+                    <input type="password" size="12" maxlength="10" name="password" required />
+            </div>
 
-            <p><label for=cpf">CPF</label><br>
-                <input type="text" placeholder="ex:12345678910" size="12" maxlength="11" id="cpf" name="cpf" required><br>
-            </p>
-            <p><label for="senha">Senha</label><br>
-                <input type="password" size="12" maxlength="10" name="password" required /><br>
-            </p>
-
-            <p><input type="submit" value="Entrar"></p>
+            <input class="btn btn-outline-primary" type="reset">
+            <input class="btn btn-outline-primary" type="submit" value="Entrar">
 
         </form>
-    </fieldset>
+    </div> 
+    
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/jquery.mask.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.cpf').mask('000.000.000-00', {reverse: true});
+            }
+        );
+    </script>
 </body>
 
 </html>

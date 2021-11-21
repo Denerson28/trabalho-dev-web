@@ -7,67 +7,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
-  <title>Lan√ßamentos</title>
+  <title>LanÁamentos</title>
 </head>
 
 <body>
     
     <header>
-        <jsp:include page = "./header.jsp" />
+        <jsp:include page="./header.jsp" />
     </header>
 
-    <div class="conteudo">
-        <div class="titulodapagina"> Cadastro de Lan√ßamentos na Conta-Corrente</div>
-        <form>
+    <div class="content">
+        <form class="card">
+            <h3> Cadastro de LanÁamentos na Conta-Corrente</h3>
             <div class="form-content">
-                <label for="?contacorrente">Conta</label>
+                <label for="contacorrente">Conta</label>
                 <select placeholder="contacorrente" name="contacorrente">
                     <option value="contafaculdade">Conta Faculdade</option>
                     <option value="contacasal">Conta Casal</option>
-                    <option value="contasal√°rio">Conta Sal√°rio</option>
+                    <option value="contasalario">Conta Sal·rio</option>
                 </select>
             </div>
 
             <div class="form-content">
                 <label for="categoria">Categoria</label>
                 <select name="categoria">
-                    <option value="planodesaude">Plano de Sa√∫de</option>
+                    <option value="planodesaude">Plano de Sa˙de</option>
                     <option value="luz">Luz</option>
-                    <option value="salario">Sal√°rio</option>
+                    <option value="salario">Sal·rio</option>
                 </select>
             </div>
 
             <div class="form-content">
                 <label for="?valor">Valor</label>
-                <input type="text" placeholder="ex: R$250,00" size="14" id="valor" name="valor">
+                <input type="text" class="money" placeholder="ex: 250,00" size="14" id="valor" name="valor">
             </div>
 
             <div class="form-content">
-                <label for="operacao">Opera√ß√£o</label>
+                <label for="operacao">OperaÁ„o</label>
                 <div class="form-pagamento">
-                    <input type="radio" class="opcao" name="opcao" value="debito"> D√©bito
-                    <input type="radio" class="opcao" name="opcao" value="credito"> Cr√©dito
+                    <input type="radio" class="opcao" name="opcao" value="debito"> DÈbito
+                    <input type="radio" class="opcao" name="opcao" value="credito"> CrÈdito
                 </div>
             </div>
 
             <div class="form-content">
                 <label for="data">Data</label>
-                <input type="date" size="38" id="?data?" name="?data?">
+                <input type="text" class="date" id="data" name="data">
             </div>
 
             <div class="form-content">
-                <label for="descricao">Descri√ß√£o</label>
+                <label for="descricao">DescriÁ„o</label>
                 <textarea rows="5" cols="30" style="resize: none" name="descricao" form="usrform"></textarea>
             </div>
 
 
-            <input type="reset">
-            <input type="submit" value="Enviar">
+            <input class="btn btn-outline-primary" type="reset">
+            <input class="btn btn-outline-primary" type="submit" value="Enviar">
 
         </form>
     </div>
+    
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/jquery.mask.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.date').mask('00/00/0000');
+            }
+        );
+
+        $(document).ready(function(){
+            $('.money').mask('000.000.000.000.000,00', {reverse: true});
+            }
+        );
+        
+    </script>
   </body>
 
 </html>

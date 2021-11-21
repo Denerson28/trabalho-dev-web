@@ -7,41 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <title>formulario usuario</title>
+  <link rel="stylesheet" href="./css/style.css" />
+
+
+  <title>Cadastrar Usuï¿½rio</title>
 </head>
 
 <body>
+  <header>
+    <jsp:include page="./header.jsp" />
+  </header>
 
-    <header>
-        <jsp:include page = "./header.jsp" />
-    </header>
-  <fieldset>
-    <legend>Cadastro de Usuario</legend>
-    <form>
-
-      <p><label for="nome">Nome Completo</label><br>
-        <input type="text" placeholder="ex: Lucas Silva Ferreira" size="38" id="nome" name="nome"><br>
-      </p>
-      <p><label for="cpf">CPF</label><br>
-        <input type="text" placeholder="ex:12345678910" size="12" maxlength="11" id="cpf" name="cpf"><br>
-      </p>
-      <p><label for="senha">Senha</label><br>
-        <input type="password" size="12" maxlength="10" name="password" /><br>
-      </p>
-      <p><label for="statusdousuario">Status do Usuario</label><br>
-        <select placeholder="Status do Usuário" name="statusdousuario">
-      </p>
-
-      <option value="Disponível">Disponível</option>
-      <option value="Suspenso">Suspenso</option>
+  <div class="content">
+    <form class="card">
+      <h3>Cadastro de Usuário</h3>
+      <label for="nome">Nome Completo</label>
+      <input type="text" placeholder="ex: Lucas Silva Ferreira" size="38" id="nome" name="nome" required>
+      <label for="cpf">CPF</label>
+      <input type="text" class="cpf" placeholder="Digite seu CPF" size="12" maxlength="11" id="cpf" name="cpf" required>
+      <label for="senha">Senha</label>
+      <input type="password" size="12" maxlength="10" name="password" required />
+      <label for="nome">E-mail</label>
+      <input type="text" placeholder="lucassilva@hotmail.com" size="38" id="email" name="email" required>
+      <label for="statusdousuario">Status do Usuário</label>
+      <select placeholder="Status do Usuário" name="statusdousuario">
+        <p>
+          <option value="Disponï¿½vel">Disponível</option>
+          <option value="Suspenso">Suspenso</option>
+        </p>
       </select>
 
-      <p><input type="reset">
-        <input type="submit" value="Enviar">
-      </p>
 
-    </form>
-  </fieldset>
+      <input class="btn btn-outline-primary" type="reset">
+      <input class="btn btn-outline-primary" type="submit" value="Enviar">
+
+  </div>
+  </form>
+
+  <script src="./scripts/jquery-3.4.1.min.js"></script>
+  <script src="./scripts/jquery.mask.min.js"></script>
+  <script src="./scripts/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.cpf').mask('000.000.000-00', { reverse: true });
+    }
+    );
+  </script>
 </body>
 
 </html>

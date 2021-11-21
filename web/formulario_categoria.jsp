@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    
 
     <title>Cadastrar Categoria</title>
     <div>
@@ -18,12 +19,12 @@
         <jsp:include page="./header.jsp"/>
     </header>
 
-    <div class="conteudo">
-        <div class="titulodapagina"> Cadastro de Categoria</div>
-        <form>
+    <div class="content">
+        <form class="card">
+            <h3> Cadastro de Categoria</h3>
             <label for="categoria"></label><br>
-            <input type="text" size="38" id=“categoria” name=“valor” required>
-            <input type="submit" value="Enviar"></p>
+            <input type="text" size="38" id="categoria" name="valor" required>
+            <input class="btn btn-outline-primary" type="submit" value="Enviar"></p>
 
         </form>
         </fieldset>

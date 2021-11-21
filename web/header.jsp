@@ -7,19 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Pagina Incial</title>
 </head>
 
 <body>
     <header>
         <div class="cabecalho">
-            <a href="index.jsp" id="1">Home</a>
-            <a href="formulario_login.jsp" id="2">Login</a>
-            <a href="./formulario_usuario.jsp" id="3">Cadastro Usuario</a>
-            <a href="./formulario_adm.jsp" id="4">Cadastro Administrador</a>
-            <a href="./formulario_categoria.jsp" id="5">Catetoria</a>
-            <a href="./formulario_lancamento.jsp" id="6">Lancamento</a>
-            <a href="./formulario_conta_corrente.jsp" id="7">Conta Corrente</a>
+            <a class="btn btn-secondary" href="index.jsp">Home</a>
+            <a class="btn btn-secondary" href="formulario_login.jsp">Login</a>
+            <a class="btn btn-secondary" href="./formulario_usuario.jsp">Cadastro Usuario</a>
+            <a class="btn btn-secondary" href="./formulario_adm.jsp">Cadastro Administrador</a>
+            <a class="btn btn-secondary" href="./formulario_categoria.jsp">Catetoria</a>
+            <a class="btn btn-secondary" href="./formulario_lancamento.jsp">Lancamento</a>
+            <a class="btn btn-secondary" href="./formulario_conta_corrente.jsp">Conta Corrente</a>
         </div>
     </header>
     <main>
